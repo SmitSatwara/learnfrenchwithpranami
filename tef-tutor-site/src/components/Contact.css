@@ -1,0 +1,138 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 4rem 2rem;
+  background-color: #ffffff;
+  scroll-margin-top: 80px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4A90E2;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtext {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6C7A89;
+  margin-bottom: 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4A90E2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.contact-form button {
+  background-color: #FF6F61; /* Coral */
+  color: white;
+  padding: 0.6rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e85b50; /* Slightly darker coral */
+  transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495E;
+  padding-left: 1rem;
+}
+
+.contact-info a {
+  color: #FF6F61;
+  text-decoration: none;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+  color: #4A90E2;
+}
+
+.note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* Footer Thank You Message */
+.contact-bottom-spacer {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.footer-note {
+  font-size: 2rem;
+  color: #6C7A89;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  .contact-form button {
+    align-self: center;
+  }
+
+  .footer-note {
+    font-size: 1.5rem;
+  }
+}
