@@ -8,12 +8,18 @@
   --white: #ffffff;
 }
 
+/* Section styles */
 .hero-section {
   background-color: var(--white);
   padding: 5rem 2rem 3rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 80px); /* Subtract navbar height */
+  text-align: center; /* Center the text inside the Hero section */
+  overflow: hidden;
+  margin: 0;
+  padding-top: 80px; /* Prevent navbar overlap */
 }
 
 .hero-container {
@@ -25,21 +31,18 @@
   align-items: center;
 }
 
-/* Top line: Learn French with Pranami */
+/* Left column - Title Styling */
 .hero-top-title {
   grid-column: 1 / -1;
   font-size: 4rem;
-   font-family: 'Alex Brush', cursive;
+  font-family: 'Alex Brush', cursive;
   font-weight: 200;
   margin: 5;
-
-  color: #34495E; /* Dark slate gray (clean and simple) */
-  text-align: center;
+  color: #34495E;
+  text-align: left;
   margin-bottom: 2rem;
   line-height: 1.2;
 }
-
-
 
 /* Left column */
 .hero-text {
@@ -53,13 +56,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 1rem 0;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%; /* Ensure title fits within container */
 }
 
+/* Subtext */
 .hero-subtext {
   font-size: 1.25rem;
   color: var(--text-light);
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-align: left;
 }
 
 .hero-benefits {
@@ -130,29 +139,45 @@
     text-align: center;
   }
 
-.hero-top-title {
-  grid-column: 1 / -1;
-  font-size: 3.2rem;
-  font-family: 'Petit Formal Script', cursive;
-  color: var(--text-dark); /* or use a soft blue/purple if you want */
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 2rem;
-  line-height: 1.2;
-}
+  .hero-top-title {
+    font-size: 3.2rem; /* Smaller size for mobile */
+    font-family: 'Petit Formal Script', cursive;
+    color: var(--text-dark);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Reduced size for mobile to avoid cutoff */
+    text-align: left; /* Center align on mobile */
+    word-wrap:break-word;
+    white-space: normal;
+    /* margin: 0 1rem; Ensure some margin for spacing */
   }
 
   .hero-text,
-  .hero-subtext,
+  .hero-subtext {
+    text-align: left;
+    /* margin: 0 ; */
+  }
   .hero-benefits {
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    margin-left: 1rem ;
   }
 
   .hero-image {
     margin-top: 2rem;
+  }
+
+  /* Reduce font size for hero subtext */
+  .hero-subtext {
+    font-size: 1.1rem; /* Adjust size for mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-benefits {
+    font-size: 1rem; /* Adjust font size for mobile */
   }
 }

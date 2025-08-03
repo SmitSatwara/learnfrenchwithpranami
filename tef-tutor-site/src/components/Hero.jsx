@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Hero.css';
 import heroImage from '../assets/hero-transparent.png';
 
 export default function Hero() {
+  useEffect(() => {
+    // Scroll to the Hero section when the page loads
+    const heroElement = document.getElementById('hero');
+    if (heroElement) {
+      heroElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <section id="hero" className="hero-section">
       <div className="hero-container">
-        <h2 className="hero-top-title"></h2>
         <div className="hero-text fade-in-left">
+          {/* Main Title */}
           <h1 className="hero-title">
-            Ace the TEF Exam with Personalized French Coaching 🇫🇷
+            Ace the TEF Exam with Personalized French Coaching
           </h1>
+          
+          {/* Updated Subtext */}
           <p className="hero-subtext">
-            Join students who’ve cracked the TEF with expert guidance, practical methods, and real bilingual support.
+            Starting from zero? Or stuck at CLB 5? I’ll help you grow with patient, personalized French lessons made just for you.
           </p>
+          
+          {/* List of Benefits */}
           <ul className="hero-benefits">
-            <li>🎯 100% TEF-focused learning</li>
-            <li>🌟 Friendly, bilingual instruction</li>
-            <li>📈 Smart techniques that work</li>
+            <li>✔️ Daily homework, personalized corrections, and real improvement</li>  
+            <li>✔️ 1-on-1 lessons tailored to your pace</li>        
+            <li>✔️ 100% TEF-focused learning</li>
           </ul>
         </div>
 

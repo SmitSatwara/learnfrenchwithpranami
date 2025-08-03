@@ -11,12 +11,12 @@ const courseData = [
       'Format: One-on-one personalized classes',
       'Learn essential grammar, vocabulary, pronunciation, and conversational skills through a structured yet flexible plan.',
       'Study material will be provided to support your learning.',
-      '$12/hour',
-      'Bundle Offer: 5 classes for $50 (save $10)'
+      '$15/hour',
+      'Bundle Offer: 5 classes for $65 (save $10)'
     ]
   },
   {
-    icon: '🇫🇷',
+     icon: '📚',
     title: 'TEF Canada Preparation Course',
     description: 'Crack the TEF with confidence.',
     details: [
@@ -47,6 +47,18 @@ const courseData = [
       'Weekly topics, corrections, and rewriting exercises with guided feedback.',
       'Study material will be provided, including sample answers and writing strategies.',
       '$15/hour'
+    ]
+  },
+  {
+    icon: '📘',
+    title: 'TEF Speaking Guide PDF',
+    description: 'Master Section A & B with this complete guide.',
+    details: [
+      'Includes Section A & B with real exam-style topics and responses.',
+      'Interactive questions, wide range of reactions, strong conclusions.',
+      'Well-structured answers with advanced vocabulary and linking phrases.',
+      'Covers scoring criteria: coherence, fluency, grammar, and lexical range.',
+      '$50 (one-time purchase)'
     ]
   },
   {
@@ -81,10 +93,11 @@ export default function Courses() {
         <div className="courses-grid">
           {courseData.map((course, index) => (
             <div className="course-card" key={index} onClick={() => openModal(course)}>
-              <div className="hover-overlay">Click for more info</div>
               <div className="course-icon">{course.icon}</div>
               <h3 className="course-name">{course.title}</h3>
               <p className="course-description">{course.description}</p>
+              <p className="mobile-cta">Tap for more info</p>
+              <div className="hover-overlay">Click for more info</div>
             </div>
           ))}
         </div>
