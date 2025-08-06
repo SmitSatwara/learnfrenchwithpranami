@@ -18,12 +18,18 @@ export default function Contact() {
     setLoading(true);
     setError('');
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000); // 8-second timeout
+
     try {
       const response = await fetch('https://learnfrenchwithpranami-backend.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       });
+
+      clearTimeout(timeout);
 
       if (response.ok) {
         setShowAlert(true);
@@ -34,7 +40,7 @@ export default function Contact() {
       }
     } catch (err) {
       console.error('Error:', err);
-      setError('Network error. Please try again later.');
+      setError('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
