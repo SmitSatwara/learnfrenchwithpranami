@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://learnfrenchwithpranami.onrender.com',
+  origin: 'https://learnfrenchwithpranami.com',
 }));
 app.use(express.json());
 

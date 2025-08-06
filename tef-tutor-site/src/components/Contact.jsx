@@ -84,7 +84,7 @@ export default function Contact() {
 
             {error && (
               <div className="custom-error">
-                ❌ {error}
+                ❌ Please try again later.
               </div>
             )}
           </form>
