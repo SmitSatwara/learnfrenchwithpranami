@@ -11,6 +11,7 @@
   --dark-gray: #444;
 }
 
+/* Section Styles */
 .about-section {
   background-color: var(--white);
   padding: 4rem 2rem;
@@ -78,42 +79,36 @@
   transform: scale(1.1);
 }
 
+/* MODAL OVERLAY */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
-  padding: 2rem;
+
+  /* Fix for scroll visibility on mobile */
+  display: block;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 1rem;
 }
 
+/* MODAL CONTENT */
 .modal-content {
   background-color: var(--white);
-  padding: 2rem;
   border-radius: 16px;
-  max-width: 900px;
   width: 100%;
-  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  position: relative;
+
+  max-height: none;
+  overflow: visible;
 }
 
-.modal-close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--salmon);
-  cursor: pointer;
-}
-
+/* MODAL TITLE */
 .modal-title {
   font-size: 2rem;
   color: var(--blue);
@@ -121,12 +116,33 @@
   margin-bottom: 2rem;
 }
 
+/* CLOSE BUTTON */
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--salmon);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* MODAL ROWS */
 .modal-row {
   display: flex;
-  align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.modal-row.first-row {
+  flex-direction: row-reverse;
+}
+
+.modal-row.even {
+  flex-direction: row;
 }
 
 .modal-image-left,
@@ -144,7 +160,7 @@
   text-align: justify;
 }
 
-/* Responsive adjustments */
+/* Responsive for mobile */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
@@ -155,16 +171,35 @@
     font-size: 2rem;
   }
 
+  .modal-content {
+    padding: 1.2rem 1rem;
+  }
+
   .modal-row {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
+  }
+
+  .modal-description {
+    order: -1 !important;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .modal-image-left,
+  .modal-image-right {
+    width: 100%;
+    max-width: 350px;
   }
 
   .modal-title {
     font-size: 1.6rem;
   }
 
-  .modal-description {
-    text-align: left;
+  .modal-close-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.6rem;
   }
 }

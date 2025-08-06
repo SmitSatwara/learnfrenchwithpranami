@@ -4,8 +4,11 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-frontend-domain.com', 
+}));
 app.use(express.json());
+
 
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;

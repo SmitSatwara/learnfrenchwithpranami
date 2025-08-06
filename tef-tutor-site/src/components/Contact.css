@@ -112,12 +112,34 @@
   color: var(--gray-note);
 }
 
-
 .footer-note {
   font-size: 2rem;
   color: var(--text-light);
   font-style: italic;
   text-align: center;
+}
+
+.custom-alert,
+.custom-error {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-alert {
+  background-color: #e6f9f1;
+  color: #2e7d32;
+  border: 1px solid #b2dfdb;
+}
+
+.custom-error {
+  background-color: #fdecea;
+  color: #c62828;
+  border: 1px solid #f5c6cb;
 }
 
 @media (max-width: 768px) {

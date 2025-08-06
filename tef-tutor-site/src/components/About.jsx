@@ -40,14 +40,14 @@ export default function About() {
             <button className="modal-close-button" onClick={toggleModal}>×</button>
             <h3 className="modal-title">My French Learning Journey</h3>
 
-            <div className="modal-row">
-              <img src={firstAttemptImage} alt="First Attempt" className="modal-image-left" />
+            <div className="modal-row first-row">
               <p className="modal-description">
                 I studied for 7 to 8 hours every single day, and in less than a year, I passed TEF Canada. In April 2025, I gave my first attempt. I missed the mark in the speaking section, but I didn’t let that stop me. I came back stronger, focused even harder, and just one month later, in May 2025, I passed with CLB 7 in all sections.
               </p>
+              <img src={firstAttemptImage} alt="First Attempt" className="modal-image-left" />
             </div>
 
-            <div className="modal-row">
+            <div className="modal-row even">
               <p className="modal-description">
                 I created this platform to help others like me—whether you’re starting from scratch or have already tried and failed—because I know exactly how it feels. The pressure, the doubts, the exhaustion… I’ve been through it all. Now, I’m here to share everything I learned—the tools, tips, and support I wish I had from day one.
               </p>

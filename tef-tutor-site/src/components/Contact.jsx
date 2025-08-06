@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './Contact.css';
 import { FiMail, FiInstagram } from 'react-icons/fi';
@@ -6,6 +5,8 @@ import { FiMail, FiInstagram } from 'react-icons/fi';
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [showAlert, setShowAlert] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,9 +15,11 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
 
     try {
-      const response = await fetch('https://learnfrenchwithpranami-backend.onrender.com', {
+      const response = await fetch('https://learnfrenchwithpranami-backend.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -27,10 +30,13 @@ export default function Contact() {
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setShowAlert(false), 4000);
       } else {
-        console.error('Email sending failed.');
+        setError('Something went wrong. Please try again.');
       }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (err) {
+      console.error('Error:', err);
+      setError('Network error. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -39,12 +45,6 @@ export default function Contact() {
       <div className="contact-container">
         <h2 className="contact-title">Get in Touch</h2>
         <p className="contact-subtext">Have questions or want to book a class? Just send a message below!</p>
-
-        {showAlert && (
-          <div className="custom-alert">
-            🎉 Thank you for your message! I’ll get back to you shortly.
-          </div>
-        )}
 
         <div className="contact-grid">
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -72,7 +72,21 @@ export default function Contact() {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+
+            {showAlert && (
+              <div className="custom-alert">
+                🎉 Thank you for your message! I’ll get back to you shortly.
+              </div>
+            )}
+
+            {error && (
+              <div className="custom-error">
+                ❌ {error}
+              </div>
+            )}
           </form>
 
           <div className="contact-info">
