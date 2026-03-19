@@ -12,7 +12,7 @@ const courseData = [
       'Learn essential grammar, vocabulary, pronunciation, and conversational skills through a structured yet flexible plan.',
       'Study material will be provided to support your learning.',
       '$16/hour',
-      'Bundle Offer: 5 classes for $75 (save $5)'
+      'Bundle Offer(One-Time): 5 classes for $75 (save $5)'
     ]
   },
   {
