@@ -11,8 +11,8 @@ const courseData = [
       'Format: One-on-one personalized classes',
       'Learn essential grammar, vocabulary, pronunciation, and conversational skills through a structured yet flexible plan.',
       'Study material will be provided to support your learning.',
-      '$15/hour',
-      'Bundle Offer: 5 classes for $65 (save $10)'
+      '$16/hour',
+      'Bundle Offer: 5 classes for $75 (save $5)'
     ]
   },
   {
@@ -24,7 +24,7 @@ const courseData = [
       'Includes full mock speaking tests, personalized corrections, and exam strategies.',
       'Practice with real TEF-style prompts and get expert feedback.',
       'Study material will be provided, including tips, templates, and exercises.',
-      '$15/hour'
+      '$16/hour'
     ]
   },
   {
@@ -46,7 +46,7 @@ const courseData = [
       'We’ll focus on structure, grammar, vocabulary, and clarity.',
       'Weekly topics, corrections, and rewriting exercises with guided feedback.',
       'Study material will be provided, including sample answers and writing strategies.',
-      '$15/hour'
+      '$16/hour'
     ]
   },
   {
