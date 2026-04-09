@@ -58,7 +58,7 @@ const courseData = [
       'Interactive questions, wide range of reactions, strong conclusions.',
       'Well-structured answers with advanced vocabulary and linking phrases.',
       'Covers scoring criteria: coherence, fluency, grammar, and lexical range.',
-      '$50 (one-time purchase)'
+      '$130 (one-time purchase)'
     ]
   },
   {
@@ -68,7 +68,7 @@ const courseData = [
     details: [
       'Discuss your goals, your current level, and the best course plan for you.',
       'A learning roadmap and suggestions will be shared after the call.',
-      '$10 (30 minutes)'
+      '$13 (30 minutes)'
     ]
   }
 ];
