@@ -68,7 +68,7 @@ const courseData = [
     details: [
       'Discuss your goals, your current level, and the best course plan for you.',
       'A learning roadmap and suggestions will be shared after the call.',
-      '$13 (30 minutes)'
+      '$15 (30 minutes)'
     ]
   }
 ];
