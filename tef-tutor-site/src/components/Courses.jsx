@@ -3,19 +3,6 @@ import './Courses.css';
 
 const courseData = [
   {
-    icon: '🔰',
-    title: '1:1 Beginner French Course',
-    description: 'Start your French journey with confidence.',
-    details: [
-      'Level: Complete Beginner – A1',
-      'Format: One-on-one personalized classes',
-      'Learn essential grammar, vocabulary, pronunciation, and conversational skills through a structured yet flexible plan.',
-      'Study material will be provided to support your learning.',
-      '$18/hour',
-      'Bundle Offer(One-Time): 5 classes for $86 (save $4)'
-    ]
-  },
-  {
      icon: '📚',
     title: 'TEF Canada Preparation Course',
     description: 'Crack the TEF with confidence.',
@@ -24,7 +11,7 @@ const courseData = [
       'Includes full mock speaking tests, personalized corrections, and exam strategies.',
       'Practice with real TEF-style prompts and get expert feedback.',
       'Study material will be provided, including tips, templates, and exercises.',
-      '$18/hour'
+      '$20/hour'
     ]
   },
   {
@@ -46,7 +33,7 @@ const courseData = [
       'We’ll focus on structure, grammar, vocabulary, and clarity.',
       'Weekly topics, corrections, and rewriting exercises with guided feedback.',
       'Study material will be provided, including sample answers and writing strategies.',
-      '$18/hour'
+      '$20/hour'
     ]
   },
   {
@@ -68,7 +55,7 @@ const courseData = [
     details: [
       'Discuss your goals, your current level, and the best course plan for you.',
       'A learning roadmap and suggestions will be shared after the call.',
-      '$15 (30 minutes)'
+      '$17 (30 minutes)'
     ]
   }
 ];
