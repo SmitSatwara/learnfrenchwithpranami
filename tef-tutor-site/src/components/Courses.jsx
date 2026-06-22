@@ -11,7 +11,7 @@ const courseData = [
       'Includes full mock speaking tests, personalized corrections, and exam strategies.',
       'Practice with real TEF-style prompts and get expert feedback.',
       'Study material will be provided, including tips, templates, and exercises.',
-      '$20/hour'
+      '$21/hour'
     ]
   },
   {
@@ -33,7 +33,7 @@ const courseData = [
       'We’ll focus on structure, grammar, vocabulary, and clarity.',
       'Weekly topics, corrections, and rewriting exercises with guided feedback.',
       'Study material will be provided, including sample answers and writing strategies.',
-      '$20/hour'
+      '$21/hour'
     ]
   },
   {
